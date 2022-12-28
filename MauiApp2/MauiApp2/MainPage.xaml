@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <!--<Label
+                Text="Can I Failover?"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center"/>-->
+            <StackLayout RadioButtonGroup.GroupName="VPGFilterType">
+                <Label Text="Which group of VPGs would you like to test?"/>
+                <RadioButton x:Name="AllVPGFilter" Content="All VPGs"/>
+                <RadioButton x:Name="ByZorgFilter" Content="Filter By ZORG ID"/>
+                <Entry x:Name="ZorgID" Placeholder="ZORG ID" WidthRequest="400" HorizontalOptions="Start"/>
+                <RadioButton x:Name="ByPathFilter" Content="Path to a file containing line seperated VPG list"/>
+                <Entry x:Name="PathToFile" Placeholder="Path to file" WidthRequest="400" HorizontalOptions="Start"/>
+            </StackLayout>
+            <Entry
+                x:Name="UsernameEntry"
+                Placeholder="Enter Zerto username"
+                Completed="OnUsernameEntryCompleted"
+                WidthRequest="200"/>
+            
+            <Entry
+                x:Name="PasswordEntry"
+                Placeholder="Enter Zerto password"
+                IsPassword="true"
+                WidthRequest="200"
+                Completed="OnPasswordEntryCompleted"/>
+            <Button
+                x:Name="RunBtn"
+                Text="Run"
+                SemanticProperties.Hint="Starts the application"
+                Clicked="OnRunClicked"
+                HorizontalOptions="End"/>
+            <Image
+                Source="zerto_logo.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+
+            
+
+            <Label
+                Text="This is a tool that should validate whether or not you have suffcient resources to failover a group of VPGs at the same time"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <!--<Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />-->
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
