@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NetVimClient" Version="6.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="System.Private.ServiceModel" Version="4.10.0" />
+    <PackageReference Include="VimClient" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="VMware.Binding.Wcf">
+      <HintPath>..\..\..\..\Program Files\WindowsPowerShell\Modules\VMware.VimAutomation.Common\13.0.0.20797081\netcoreapp3.1\VMware.Binding.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="VMware.Binding.WsTrust">
+      <HintPath>..\..\..\..\Program Files\WindowsPowerShell\Modules\VMware.VimAutomation.Common\13.0.0.20797081\netcoreapp3.1\VMware.Binding.WsTrust.dll</HintPath>
+    </Reference>
+    <Reference Include="VMware.System.Private.ServiceModel">
+      <HintPath>..\..\..\..\Program Files\WindowsPowerShell\Modules\VMware.VimAutomation.Common\13.0.0.20797081\netcoreapp3.1\VMware.System.Private.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="VMware.Vim">
+      <HintPath>..\..\..\..\Program Files\WindowsPowerShell\Modules\VMware.Vim\8.0.1.20797199\netcoreapp2.0\VMware.Vim.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
